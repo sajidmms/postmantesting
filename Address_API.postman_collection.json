@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "3273d69c-67ed-4c12-a783-16b487ef34e5",
+		"name": "Address API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5077937"
+	},
+	"item": [
+		{
+			"name": "Get Address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://25536437-5c33-435a-a284-efd3f231bc7d.mock.pstmn.io/getAddress/1",
+					"protocol": "https",
+					"host": [
+						"25536437-5c33-435a-a284-efd3f231bc7d",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"getAddress",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Correct city is returned\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.address.city).to.eql(\"Belmont\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://25536437-5c33-435a-a284-efd3f231bc7d.mock.pstmn.io/getAddress/1",
+					"protocol": "https",
+					"host": [
+						"25536437-5c33-435a-a284-efd3f231bc7d",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"getAddress",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
